@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EarFret: guitar and bass practice you answer by playing</title>
+  <meta name="description" content="EarFret is guitar and bass practice you answer on your real instrument. It listens on your device and tells you right away if you got it, and how close you were. Fretboard, ear training, theory on the neck. iPhone, iPad, Mac and Apple Watch.">
+  <meta name="theme-color" content="#fbfaf8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f0e0d" media="(prefers-color-scheme: dark)">
+  <!-- TODO: once https://earfret.com serves this site, uncomment the canonical link and switch
+       og:url, og:image and twitter:image below to https://earfret.com/… (they must be absolute). -->
+  <!-- <link rel="canonical" href="https://earfret.com/"> -->
+  <link rel="icon" href="favicon-64.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="EarFret">
+  <meta property="og:title" content="EarFret: answer with your guitar">
+  <meta property="og:description" content="Guitar and bass practice that listens as you play. Hear it, play it on your real instrument, and EarFret tells you if it's right. iPhone, iPad, Mac and Apple Watch.">
+  <meta property="og:url" content="https://jeffreychall.github.io/earfret-site/">
+  <meta property="og:image" content="https://jeffreychall.github.io/earfret-site/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="EarFret app icon and an iPhone showing a fretboard drill, with the words: Answer with your guitar.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EarFret: answer with your guitar">
+  <meta name="twitter:description" content="Guitar and bass practice that listens as you play. iPhone, iPad, Mac and Apple Watch.">
+  <meta name="twitter:image" content="https://jeffreychall.github.io/earfret-site/img/og-image.jpg">
+  <meta name="twitter:image:alt" content="EarFret app icon and an iPhone showing a fretboard drill, with the words: Answer with your guitar.">
+  <link rel="preload" as="image" href="img/iphone-find-near.webp" media="(prefers-color-scheme: light)">
+  <link rel="preload" as="image" href="img/iphone-find-near-dark.webp" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="EarFret home">
+      <img src="favicon-64.png" width="28" height="28" alt="">
+      EarFret
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li class="nav-link"><a href="#how">How it works</a></li>
+        <li class="nav-link"><a href="#features">Features</a></li>
+        <li class="nav-link"><a href="#watch">Apple Watch</a></li>
+        <li class="nav-link"><a href="#pricing">Pricing</a></li>
+        <li class="nav-link"><a href="#faq">FAQ</a></li>
+        <!-- TODO: same TestFlight link as the hero's "Join the beta" button. -->
+        <li><a class="button" href="#waitlist">Join the beta</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ Hero ============ -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Guitar &amp; bass &middot; Coming November 17, 2026</span>
+        <h1 id="hero-title">Answer with <span class="accent">your guitar.</span></h1>
+        <p class="lede">EarFret plays a note, names one or asks for a shape, and you answer on your real instrument. It listens on your device and tells you straight away whether you got it, and how close you were if you didn't.</p>
+        <div class="actions">
+          <!-- TODO: replace href with the TestFlight public link (https://testflight.apple.com/join/XXXXXXXX).
+               Until then it scrolls to the waitlist. -->
+          <a class="button" href="#waitlist" id="beta-link">Join the beta</a>
+          <!-- TODO: replace this placeholder with Apple's official "Download on the App Store" badge
+               (download the artwork from https://developer.apple.com/app-store/marketing/guidelines/ ,
+               keep it unmodified) and set href to the App Store URL once the app is live. -->
+          <a class="store-badge" href="#waitlist" aria-label="EarFret on the App Store, coming November 17, 2026">
+            <small>Coming to the App Store</small>
+            <strong>November 17, 2026</strong>
+          </a>
+        </div>
+        <p class="muted small">Free to download. iPhone, iPad, Mac and Apple Watch.</p>
+      </div>
+
+      <div class="hero-visual">
+        <div class="phone">
+          <picture>
+            <source srcset="img/iphone-find-near-dark.webp" media="(prefers-color-scheme: dark)">
+            <img src="img/iphone-find-near.webp" width="600" height="1304" fetchpriority="high"
+                 alt="EarFret on iPhone: the prompt is G on the D string. The player played G sharp, and the app says: Close, try again. One fret too high.">
+          </picture>
+        </div>
+        <div class="chip chip-1" aria-hidden="true"><span class="dot near">&#8594;</span>One fret too high</div>
+        <div class="chip chip-2" aria-hidden="true"><span class="dot near">&#8597;</span>Right note, wrong octave</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ How it works ============ -->
+  <section id="how" class="alt" aria-labelledby="how-title">
+    <div class="wrap center">
+      <span class="eyebrow">How it works</span>
+      <h2 id="how-title">Hear it. Play it. Know it.</h2>
+      <p class="lede">Most fretboard apps have you tap a screen. EarFret has you play, so what you learn ends up in your hands and ears, not just your eyes.</p>
+
+      <ol class="steps">
+        <li>
+          <div class="phone">
+            <picture>
+              <source srcset="img/iphone-intervals-near-dark.webp" media="(prefers-color-scheme: dark)">
+              <img src="img/iphone-intervals-near.webp" width="600" height="1304" loading="lazy" decoding="async"
+                   alt="An interval drill: play both notes, starting on A on the D string, with a Hear it again button.">
+            </picture>
+          </div>
+          <h3>Hear it</h3>
+          <p class="muted">EarFret plays a note, an interval, a melody or a chord, or shows you a note name or a shape to find.</p>
+        </li>
+        <li>
+          <div class="phone">
+            <picture>
+              <source srcset="img/iphone-alongfret-right-dark.webp" media="(prefers-color-scheme: dark)">
+              <img src="img/iphone-alongfret-right.webp" width="600" height="1304" loading="lazy" decoding="async"
+                   alt="Along a Fret: play every string at fret 9, low to high. Each note lights up on the neck as it's heard.">
+            </picture>
+          </div>
+          <h3>Play it</h3>
+          <p class="muted">Answer on your guitar or bass, acoustic or electric, or sing it. Every note you play lights up on the neck.</p>
+        </li>
+        <li>
+          <div class="phone">
+            <picture>
+              <source srcset="img/iphone-find-right-dark.webp" media="(prefers-color-scheme: dark)">
+              <img src="img/iphone-find-right.webp" width="600" height="1304" loading="lazy" decoding="async"
+                   alt="Find the Note: G on the D string, marked right at fret 5.">
+            </picture>
+          </div>
+          <h3>It tells you</h3>
+          <p class="muted">Right away, on the neck: what you played, how close it was ("one fret too high", "right note, wrong octave"), and where the answer is.</p>
+        </li>
+      </ol>
+
+      <p class="privacy-note">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        <span style="text-align:left">The listening happens entirely on your device. No audio is ever recorded, stored or sent anywhere.</span>
+      </p>
+
+      <!-- TODO: 20-second demo video. Replace the placeholder div below with something like:
+           <video controls playsinline preload="none" poster="media/demo-poster.jpg" width="1280" height="720">
+             <source src="media/demo.mp4" type="video/mp4">
+           </video>
+           Keep it small (H.264, under ~5 MB) and add captions (<track kind="captions" ...>) if there's speech. -->
+      <div class="video-slot" role="img" aria-label="Demo video coming soon">
+        <p>A 20-second demo is on its way.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Features ============ -->
+  <section id="features" aria-labelledby="features-title">
+    <div class="wrap">
+      <div class="center">
+        <span class="eyebrow">Features</span>
+        <h2 id="features-title">Everything you practice, checked as you play.</h2>
+        <p class="lede">Fretboard, ear, theory, reading and rhythm, with spaced repetition bringing back the parts you're slow on.</p>
+      </div>
+
+      <div class="features">
+        <article class="card feature-wide">
+          <div>
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="12" r="2.5"/><circle cx="9" cy="17" r="2.5"/><path d="M3 21h18"/></svg></div>
+            <h3>Theory on the neck</h3>
+            <p>Triads in every inversion, 7th chords, interval shapes, CAGED shapes, scale runs and chord tones over changes, drawn on your own tuning and checked note by note as you play them.</p>
+            <ul class="tags" aria-label="Topics">
+              <li>Triads</li><li>7ths</li><li>CAGED</li><li>Scale runs</li><li>Chord changes</li>
+            </ul>
+          </div>
+          <div class="shot">
+            <div class="phone">
+              <picture>
+                <source srcset="img/iphone-triad-right-dark.webp" media="(prefers-color-scheme: dark)">
+                <img src="img/iphone-triad-right.webp" width="600" height="1304" loading="lazy" decoding="async"
+                     alt="Triads drill: D sharp augmented in root position, with D sharp, G and B marked on the neck and the verdict Right.">
+              </picture>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16M9 3v18M15 3v18"/></svg></div>
+          <h3>Learn the whole neck</h3>
+          <p>Find a note on a string, find every place it lives, name the notes along a fret, work octave shapes. A heat map shows what you know.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 12h2l2-6 3 12 3-9 2 5h2l2-2h2"/></svg></div>
+          <h3>Ear training you play back</h3>
+          <p>Hear a note, an interval or a short melody and play it back. Name chords, progressions, scales and scale degrees by ear, or sing intervals.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg></div>
+          <h3>Reading and rhythm</h3>
+          <p>Read notes on the staff and play them. Tap or play rhythms back, read them, and feel tempo, meter and swing.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg></div>
+          <h3>Spaced repetition</h3>
+          <p>Every string and note is scheduled on its own, so EarFret brings back what you're about to forget, right when reviewing it sticks.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg></div>
+          <h3>60-second challenges</h3>
+          <p>How many can you get in a minute? Beat your best and climb the Game Center leaderboards. Plus a fresh daily challenge, one try a day.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19c4 0 4-6 8-6s4-6 8-6"/><circle cx="4" cy="19" r="1.5"/><circle cx="12" cy="13" r="1.5"/><circle cx="20" cy="7" r="1.5"/></svg></div>
+          <h3>Note Path</h3>
+          <p>A guided curriculum from open strings to the whole neck, one stage at a time. Already know some? Test out and skip ahead.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg></div>
+          <h3>Widgets and iCloud sync</h3>
+          <p>Your streak and what's due on the Home Screen. Progress follows you across iPhone, iPad and Mac through your own iCloud.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M14 4l6 6-9 9H5v-6z"/><path d="M12 6l6 6"/></svg></div>
+          <h3>Your instrument, your setup</h3>
+          <p>Guitar (6, 7 or 8 strings), bass, ukulele and more; alternate tunings; left-handed neck; audio interfaces and MIDI.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg></div>
+          <h3>In 22 languages</h3>
+          <p>English and 21 more, from Japanese and Korean to German, Spanish, Portuguese and Ukrainian.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Apple Watch ============ -->
+  <section id="watch" class="watch-band" aria-labelledby="watch-title">
+    <div class="wrap center">
+      <span class="eyebrow">Apple Watch</span>
+      <h2 id="watch-title">Guitar quizzes on your wrist.</h2>
+      <p class="lede">Fun, fast quizzes for the moments between: in line, on the bus, waiting for the kettle. Find notes on the neck, work out intervals, or hear a chord and tap major or minor, right on your wrist. Every answer counts toward your streak and your reviews on iPhone.</p>
+
+      <div class="watch-row">
+        <figure>
+          <div class="watch"><img src="img/watch-menu.webp" width="416" height="496" loading="lazy" decoding="async" alt="EarFret on Apple Watch: a menu with Notes on the neck, Intervals and Notes in chords."></div>
+          <figcaption>Pick a quiz</figcaption>
+        </figure>
+        <figure>
+          <div class="watch"><img src="img/watch-neck.webp" width="416" height="496" loading="lazy" decoding="async" alt="A Notes quiz, question 1 of 10: a dot on the neck at fret 6 of the G string, with note buttons C sharp and C to choose from."></div>
+          <figcaption>Name the note on the neck</figcaption>
+        </figure>
+        <figure>
+          <div class="watch"><img src="img/watch-ear-chords.webp" width="416" height="496" loading="lazy" decoding="async" alt="A Chord Sounds quiz, question 1 of 10: What kind of chord? A Hear it again button and a Major answer button."></div>
+          <figcaption>Hear a chord, tap major or minor</figcaption>
+        </figure>
+        <figure>
+          <div class="watch"><img src="img/watch-intervals.webp" width="416" height="496" loading="lazy" decoding="async" alt="An Intervals quiz, question 1 of 10: What's a major 7th above F? Answer buttons F sharp and D sharp."></div>
+          <figcaption>Work out intervals</figcaption>
+        </figure>
+        <figure>
+          <div class="watch"><img src="img/watch-ear-direction.webp" width="416" height="496" loading="lazy" decoding="async" alt="An Up or Down quiz, question 1 of 10: Which way does it go? A Hear it again button and an Up, Up, Up answer button."></div>
+          <figcaption>Up or down? Trust your ear</figcaption>
+        </figure>
+      </div>
+
+      <ul class="watch-points" style="text-align:left">
+        <li>
+          <h3>On the neck and in theory</h3>
+          <p>Pick notes on the neck, intervals, notes in chords and notes in keys.</p>
+        </li>
+        <li>
+          <h3>Hear it, tap it</h3>
+          <p>Chord Sounds, Name the Interval, Up or Down? and Which Is Bigger? play through the Watch speaker or your headphones.</p>
+        </li>
+        <li>
+          <h3>Keep the flame going <span class="flame" aria-hidden="true">&#128293;</span></h3>
+          <p>Choose 5, 10 or 20 questions. A flame grows with every answer in a row.</p>
+        </li>
+        <li>
+          <h3>Quizzes that come to you</h3>
+          <p>Quick quizzes arrive as notifications. Answer with a tap, right there.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ Mac + iPad ============ -->
+  <section id="mac-ipad" aria-labelledby="mac-title">
+    <div class="wrap">
+      <div class="center">
+        <span class="eyebrow">Mac and iPad</span>
+        <h2 id="mac-title">The whole neck, at full size.</h2>
+        <p class="lede">Prop an iPad on the music stand or practice at your desk with the Mac next to your amp. Plug in an audio interface and pick the input channel your guitar is on.</p>
+      </div>
+      <div class="devices">
+        <div class="mac">
+          <img src="img/mac-session-triads.webp" width="1600" height="1000" loading="lazy" decoding="async"
+               alt="EarFret on Mac: a Triads session window over the Practice sidebar, showing D sharp augmented marked on a full-width neck, with the verdict Right.">
+        </div>
+        <div class="ipad">
+          <img src="img/ipad-scales-caged.webp" width="900" height="1200" loading="lazy" decoding="async"
+               alt="EarFret on iPad: The neck, showing the A major scale with scale degrees across the whole fretboard.">
+        </div>
+      </div>
+      <div class="split-points">
+        <div><h3>Built for each screen</h3><p>A sidebar on Mac and iPad, a session window on Mac, and a neck that uses all the room you give it.</p></div>
+        <div><h3>Audio interfaces welcome</h3><p>Use the built-in mic for an acoustic, or go straight in from an interface and choose which input channel EarFret listens to.</p></div>
+        <div><h3>One purchase, every screen</h3><p>EarFret Pro covers iPhone, iPad and Mac, and your progress syncs between them.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ No instrument ============ -->
+  <section id="no-instrument" class="alt" aria-labelledby="noinst-title">
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow">No instrument mode</span>
+        <h2 id="noinst-title">Guitar at home? Practice anyway.</h2>
+        <p class="lede">Switch to No instrument and every drill becomes tap-to-answer: tap the note names or tap the spot on the neck. The notes you tap still sound, so your ear keeps learning.</p>
+        <ul class="checks">
+          <li>Same drills, same reviews, same streak</li>
+          <li>Perfect for the commute, the couch or a quiet room</li>
+          <li>Switch back with one tap when the guitar's in reach</li>
+        </ul>
+      </div>
+      <div class="phone">
+        <picture>
+          <source srcset="img/iphone-intervals-tapnames-dark.webp" media="(prefers-color-scheme: dark)">
+          <img src="img/iphone-intervals-tapnames.webp" width="600" height="1304" loading="lazy" decoding="async"
+               alt="An interval drill in No instrument mode, answered by tapping note-name buttons under the neck.">
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Progress ============ -->
+  <section id="progress" aria-labelledby="progress-title">
+    <div class="wrap split flip">
+      <div>
+        <span class="eyebrow">Progress and streaks</span>
+        <h2 id="progress-title">Watch the neck fill in.</h2>
+        <p class="lede">A daily practice goal in minutes, a streak that forgives a rest day, and mastery by topic so you can see exactly what's sticking.</p>
+        <div class="stats">
+          <div><strong>Daily</strong><span>practice goal and mix</span></div>
+          <div><strong>Streaks</strong><span>with a rest day built in</span></div>
+          <div><strong>Mastery</strong><span>by string, note and topic</span></div>
+        </div>
+      </div>
+      <div class="phone-pair">
+        <div class="phone">
+          <picture>
+            <source srcset="img/iphone-progress-dark.webp" media="(prefers-color-scheme: dark)">
+            <img src="img/iphone-progress.webp" width="600" height="1304" loading="lazy" decoding="async"
+                 alt="The Progress screen: a 19-day streak, 89 percent right in the last 7 days, 44 minutes this week, and mastery by topic.">
+          </picture>
+        </div>
+        <div class="phone">
+          <picture>
+            <source srcset="img/iphone-summary-dark.webp" media="(prefers-color-scheme: dark)">
+            <img src="img/iphone-summary.webp" width="600" height="1304" loading="lazy" decoding="async"
+                 alt="Session done: 100 percent right first time, and the day streak at 19.">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Pricing ============ -->
+  <section id="pricing" class="alt" aria-labelledby="pricing-title">
+    <div class="wrap center">
+      <span class="eyebrow">Pricing</span>
+      <h2 id="pricing-title">Free to start. Pro when you want more.</h2>
+      <div class="price-grid">
+        <article class="card">
+          <h3>Free</h3>
+          <p>A complete fretboard trainer for standard-tuned guitar or 4-string bass.</p>
+          <ul class="checks">
+            <li>Every fretboard drill (natural notes)</li>
+            <li>Match the Note by ear</li>
+            <li>Tuner and progress</li>
+          </ul>
+        </article>
+        <article class="card pro">
+          <span class="badge">EarFret Pro</span>
+          <h3>Everything</h3>
+          <p>The rest of the ear training, theory and shapes, reading and rhythm, singing, sharps and flats, and every other instrument and tuning.</p>
+          <ul class="checks">
+            <li>Yearly with a free trial, or a one-time lifetime purchase</li>
+            <li>One purchase covers iPhone, iPad and Mac</li>
+            <li>Family Sharing included</li>
+          </ul>
+        </article>
+      </div>
+      <p class="muted small" style="margin-top:1.5rem">Prices are shown in the app in your local currency.</p>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="center">
+        <span class="eyebrow">FAQ</span>
+        <h2 id="faq-title">Questions, answered.</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Is my audio recorded?</summary>
+          <p>No. EarFret analyses the sound on your device to work out which notes you played, then discards it. Nothing is recorded, stored or sent anywhere, and there's no account, analytics or tracking. Details are in the <a href="privacy.html">privacy policy</a>.</p>
+        </details>
+        <details>
+          <summary>Which instruments does it work with?</summary>
+          <p>Guitar (6, 7 or 8 strings), bass (4, 5 or 6 strings), ukulele, mandolin, banjo and custom tunings, acoustic or electric, right- or left-handed. You can also sing, or use a MIDI keyboard or MIDI guitar.</p>
+        </details>
+        <details>
+          <summary>Which devices?</summary>
+          <p>iPhone and iPad (iOS and iPadOS 17 or later), Mac (macOS 14 or later), and Apple Watch (watchOS 10 or later) for quick quizzes on your wrist. Widgets work on iPhone, iPad and Mac.</p>
+        </details>
+        <details>
+          <summary>Does it work with an audio interface?</summary>
+          <p>Yes. Plug in your interface and choose which input channel EarFret listens to, so a guitar on input 2 works as well as one on input 1. The built-in microphone works fine for acoustic instruments and amps.</p>
+        </details>
+        <details>
+          <summary>Is there a lifetime option?</summary>
+          <p>Yes. EarFret Pro is available as a yearly subscription with a free trial, or as a one-time lifetime purchase. Either one covers iPhone, iPad and Mac, and includes Family Sharing.</p>
+        </details>
+        <details>
+          <summary>Can I practice without my guitar?</summary>
+          <p>Yes. No instrument mode turns every drill into tap-to-answer, and the notes you tap still sound. The Apple Watch quizzes and notification quizzes work without an instrument too.</p>
+        </details>
+        <details>
+          <summary>When can I try it?</summary>
+          <p>EarFret launches on the App Store on November 17, 2026. A public TestFlight beta opens before then: <a href="#waitlist">join the beta or the waitlist</a>.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Beta / waitlist ============ -->
+  <section id="waitlist" class="cta" aria-labelledby="waitlist-title">
+    <div class="wrap">
+      <div class="cta-card">
+        <img src="apple-touch-icon.png" width="180" height="180" alt="" loading="lazy">
+        <h2 id="waitlist-title">Pick up your guitar.</h2>
+        <p>EarFret arrives on the App Store November 17, 2026. Try it early in the public beta, or get one email on launch day.</p>
+        <div class="actions">
+          <!-- TODO: replace href with the TestFlight public link (same as the hero's "Join the beta").
+               Until then the button just focuses the email field below. -->
+          <a class="button" href="#email" id="beta-link-cta">Join the TestFlight beta</a>
+        </div>
+        <div class="cta-divider">or get notified at launch</div>
+
+        <!-- TODO: waitlist provider. Sign up for a newsletter service (e.g. Buttondown), then:
+               1. set data-endpoint to its form URL, e.g.
+                  https://buttondown.com/api/emails/embed-subscribe/YOUR-USERNAME
+               2. check the input's name matches what the service expects (Buttondown: "email").
+             While data-endpoint is "TODO", the form never submits: it shows the note below instead,
+             so no email is silently dropped. -->
+        <form id="waitlist-form" method="post" action="#waitlist" data-endpoint="TODO">
+          <label class="visually-hidden" for="email">Email address</label>
+          <div class="form-row">
+            <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@example.com">
+            <button class="button" type="submit">Notify me</button>
+          </div>
+          <p class="form-note" id="waitlist-note" role="status" hidden>The waitlist isn't open yet, so your email was not saved. Please check back soon.</p>
+          <noscript><p class="form-note">The waitlist needs JavaScript turned on.</p></noscript>
+        </form>
+        <p class="small" style="margin:1.25rem 0 0">One email at launch, maybe one when the beta opens. Nothing else.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; 2026 Jeff Hall. EarFret</p>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="press.html">Press</a></li>
+        <!-- TODO: the support@earfret.com mailbox must exist (e.g. Cloudflare Email Routing) before launch. -->
+        <li><a href="mailto:support@earfret.com">Support</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  // The waitlist form only submits once a real endpoint is configured (see the TODO above it).
+  (function () {
+    var form = document.getElementById('waitlist-form');
+    var note = document.getElementById('waitlist-note');
+    if (!form) return;
+    var endpoint = form.getAttribute('data-endpoint') || '';
+    if (endpoint && endpoint !== 'TODO') {
+      form.action = endpoint;
+      return;
+    }
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      note.hidden = false;
+    });
+  })();
+</script>
+</body>
+</html>
